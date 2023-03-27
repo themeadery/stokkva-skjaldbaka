@@ -60,3 +60,4 @@ I did not fork his project because it is more complicated than I needed and it i
 ## TODO
 
 - ISO ramping - Doesn't respond to the --set-config command
+- Better shutter speed handling logic/math

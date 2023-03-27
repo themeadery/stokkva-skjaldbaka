@@ -100,7 +100,7 @@ for x in range(length):
     filename = next(iterator) # Increment shot number by 1
     filename = capture_image_and_download(filename)
     brightness = measure_brightness(filename)
-    if brightness < MIN_BRIGHTNESS and shutter_choice < len(shutter_choices) - 1: # check if exceeds interval, requires dictionary lookup
+    if brightness < MIN_BRIGHTNESS and shutter_choice < len(shutter_choices) - 1: # TODO: check if exceeds interval, requires dictionary lookup
         shutter_choice = shutter_choice + 1
         set_shutter_speed(shutter_choice)
     elif brightness > MAX_BRIGHTNESS and shutter_choice > 0:
