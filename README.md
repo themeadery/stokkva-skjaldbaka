@@ -26,6 +26,7 @@ Capture an image and transfer -> Measure brightness -> Adjust settings -> Captur
 - ImageMagick (v7.x recommended)
 - USB cable
 - Change the USB mode to "PC SHOOT AUTO" or "PC SHOOT FIXED" (Recommended)
+- Shutter Dial in "T" position
 
 ## Commands
 
@@ -46,9 +47,7 @@ You probably need to power cycle the camera after fixing these problems
 
 The "PC SHOOT FIXED" USB option in the X-T1 says it will not save to the memory card, but it still does. Take out the memory card if you don't want it to fill up or be the limitation of your duration. Might also speed up the process, since it isn't trying to write data twice.
 
-Your shutter dial needs to be in the "T" position to accept shutter speed change commands.
-
-My X-T1 shuts off pretty quick if it is tethered and no commands are sent. Seems like about 1 minute timeout. Must power cycle the camera to reconnect.
+Make sure your "AUTO POWER OFF" settings is set to "OFF", or at least longer than the interval time.
 
 Sometimes the camera refuses to shut off while still plugged in to USB.
 
@@ -61,3 +60,5 @@ I did not fork his project because it is more complicated than I needed and it i
 
 - ISO ramping - Doesn't respond to the --set-config command
 - Better shutter speed handling logic/math
+- _preview.jpg clean up
+- Histogram based luminance measurement

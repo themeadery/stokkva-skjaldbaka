@@ -85,11 +85,11 @@ set_shutter_speed(shutter_choice)
 iso_current_choice, iso_choices = get_iso()
 
 # Set timelapse parameters
-#interval = int(input("Enter Interval in seconds: ")) #Turn on when it's a real interactive program
-interval = 7 # Non interactive for pasting
+interval = int(input("Enter Interval in seconds: ")) #Turn on when it's a real interactive program
+#interval = 7 # Non interactive for pasting
 interval = timedelta(seconds=interval)
-#length = int(input("Enter Total Number of Shots: ")) #Turn on when it's a real interactive program
-length = 20 # Non interactive for pasting
+length = int(input("Enter Total Number of Shots: ")) #Turn on when it's a real interactive program
+#length = 20 # Non interactive for pasting
 
 # Filename iterator
 iterator = ("DSCF%04i.RAF" % i for i in count(1)) # Generate a new filename for each shot, starting with DSCF0001.raf
