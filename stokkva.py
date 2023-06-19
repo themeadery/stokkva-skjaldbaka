@@ -3,9 +3,10 @@ from datetime import timedelta
 import time
 from itertools import count
 import subprocess
+import os
 
-MIN_BRIGHTNESS = 20000
-MAX_BRIGHTNESS = 30000
+MIN_BRIGHTNESS = 18000
+MAX_BRIGHTNESS = 25000
 
 def reset():
     print("Resetting connection to camera...")
@@ -90,6 +91,16 @@ interval = int(input("Enter Interval in seconds: ")) #Turn on when it's a real i
 interval = timedelta(seconds=interval)
 length = int(input("Enter Total Number of Shots: ")) #Turn on when it's a real interactive program
 #length = 20 # Non interactive for pasting
+
+# Make capture directory
+directory = "capture"
+print("Creating capture directory...")
+if os.path.isdir(directory):
+    print("Capture directory already exists")
+    # directory = directory + "1" # try to iterate a new directory
+else:
+    subprocess.run(["mkdir", directory])
+    print("Directory created")
 
 # Filename iterator
 iterator = ("DSCF%04i.RAF" % i for i in count(1)) # Generate a new filename for each shot, starting with DSCF0001.raf
